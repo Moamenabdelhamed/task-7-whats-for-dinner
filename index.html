@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fffaf0">
+  <title>What's For Dinner</title>
+  <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header class="site-header container-fluid">
+    <div class="header-inner d-flex align-items-center justify-content-between">
+      <a href="#top" class="wordmark" aria-label="What's For Dinner home"><span class="brand-spark"><i class="fa-solid fa-utensils"></i></span><span class="brand-copy"><strong>What's For Dinner</strong><small>Your daily meal inspiration</small></span></a>
+      <div class="header-actions d-flex align-items-center">
+        <button class="header-icon saved-recipes" aria-label="Saved recipes"><i class="fa-solid fa-bookmark"></i></button>
+        <button class="header-icon history-button" aria-label="Recently viewed recipes"><i class="fa-solid fa-clock-rotate-left"></i></button>
+        <button class="header-icon settings-button" aria-label="Settings"><i class="fa-solid fa-gear"></i></button>
+        <button class="profile-button" aria-label="Profile"><img src="images/avatar-4.jpg" alt="Profile"></button>
+      </div>
+      <button class="mobile-menu-btn" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </header>
+
+  <main id="top" class="container recipe-wrap">
+    <article class="recipe-card" aria-labelledby="recipe-name">
+      <section class="hero-photo" aria-label="Recipe photo and timing">
+        <img id="recipe-image" src="images/photo-1509722747041-616f39b57569.jpeg" alt="Fresh Caprese sandwich with mozzarella, tomato and basil">
+        <div class="rating"><span class="star">★</span><strong id="rating-value">4.5</strong><span id="review-count">(189 reviews)</span></div>
+        <div class="time-stats row g-0">
+          <div class="col-4 stat"><i class="stat-icon clock-icon fa-solid fa-clock"></i><span class="stat-label">Prep Time</span><strong id="prep-time">10 min</strong></div>
+          <div class="col-4 stat"><i class="stat-icon cook-icon fa-solid fa-fire-burner"></i><span class="stat-label">Cook Time</span><strong id="cook-time">5 min</strong></div>
+          <div class="col-4 stat"><i class="stat-icon people-icon fa-solid fa-users"></i><span class="stat-label">Servings</span><strong id="servings">2 people</strong></div>
+        </div>
+      </section>
+
+      <div class="recipe-body">
+        <div class="recipe-heading-row">
+          <div class="recipe-heading-copy">
+            <div class="recipe-tags d-flex gap-2"><span class="tag easy-tag" id="difficulty">Easy</span><span class="tag cuisine-tag" id="cuisine">Italian</span></div>
+            <h1 id="recipe-name">Caprese Sandwich</h1>
+            <p id="recipe-description" class="recipe-description">Fresh Italian sandwich with mozzarella, tomato, and basil</p>
+          </div>
+          <div class="actions-row d-flex gap-2">
+            <button class="action-btn save-btn" aria-label="Save recipe" aria-pressed="false"><i class="fa-solid fa-bookmark"></i></button>
+            <button class="action-btn share-btn" aria-label="Share recipe"><i class="fa-solid fa-share-nodes"></i></button>
+          </div>
+        </div>
+
+        <div class="time-warning d-none" id="time-warning"><span class="warning-icon"><i class="fa-solid fa-triangle-exclamation"></i></span><div><strong>Extended Preparation Time</strong><span>This recipe requires more than 45 minutes to prepare. Plan accordingly!</span></div></div>
+
+        <nav class="recipe-tabs nav" role="tablist" aria-label="Recipe details">
+          <button class="nav-link active" role="tab" aria-selected="true" data-tab="ingredients"><i class="tab-icon fa-solid fa-list-ul"></i> Ingredients</button>
+          <button class="nav-link" role="tab" aria-selected="false" data-tab="instructions"><i class="tab-icon fa-solid fa-book-open"></i> Instructions</button>
+          <button class="nav-link" role="tab" aria-selected="false" data-tab="nutrition"><i class="tab-icon fa-solid fa-chart-pie"></i> Nutrition</button>
+          <button class="nav-link" role="tab" aria-selected="false" data-tab="tips"><i class="tab-icon fa-solid fa-lightbulb"></i> Chef's Tips</button>
+        </nav>
+        <div class="tab-content-wrap" id="tabContent" role="tabpanel">
+          <ol class="ingredient-list" id="ingredients-list">
+            <li><span class="number">1</span><span>1 ciabatta bread</span></li>
+            <li><span class="number">2</span><span>200g fresh mozzarella, sliced</span></li>
+            <li><span class="number">3</span><span>2 large tomatoes, sliced</span></li>
+            <li><span class="number">4</span><span>Fresh basil leaves</span></li>
+            <li><span class="number">5</span><span>3 tablespoons pesto</span></li>
+            <li><span class="number">6</span><span>2 tablespoons balsamic glaze</span></li>
+            <li><span class="number">7</span><span>Olive oil</span></li>
+            <li><span class="number">8</span><span>Salt and pepper</span></li>
+          </ol>
+        </div>
+        <div class="card-bottom"><button id="try-another-btn" class="try-another"><i class="fa-solid fa-rotate"></i> Try Another Recipe</button></div>
+      </div>
+    </article>
+  </main>
+  <div class="toast-message" aria-live="polite" role="status"></div>
+  <script src="JS/bootstrap.bundle.min.js"></script>
+  <script src="JS/index.js"></script>
+</body>
+</html>
